@@ -29,8 +29,8 @@ public class MethodOverloading {
     //Overloading method 'add()'
     public static int add (int... numbers){
         int result = 0;
-        for (int i = 0; i < numbers.length; i++){
-            result = result + numbers[i];
+        for (int number : numbers) {
+            result = result + number;
         }
         return result;
     }
