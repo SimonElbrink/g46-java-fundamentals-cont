@@ -1,4 +1,4 @@
-package se.lexicon;
+package se.lexicon.java_time_api;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

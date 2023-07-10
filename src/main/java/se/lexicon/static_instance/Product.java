@@ -1,4 +1,4 @@
-package se.lexicon;
+package se.lexicon.static_instance;
 
 public class Product {
 
