@@ -7,7 +7,11 @@ public class BankAccount {
     String ownerName;
 
     public double withdraw(double amount){
-        return 0;
+
+//        this.balance = this.balance - amount;
+        this.balance -= amount;
+
+        return amount;
     }
 
     public boolean deposit(double amount){
