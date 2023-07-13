@@ -101,4 +101,41 @@ public class StringDemo {
         System.out.print(message.trim()); // Removes whitespaces in beginning of end of the String
     }
 
+    //More Methods.
+    public static void equals(){
+
+        String message1 = "I Love Programming in Java!";
+        String message2 = "i LOVe PrOgraMMing in JAVA!";
+
+        boolean isTheSame = message1.equals(message2);
+        boolean isTheSameIgnoreCase = message1.equalsIgnoreCase(message2);
+
+        boolean ownIgnoreCasing = message1.toLowerCase().equals(message2.toLowerCase());
+
+    }
+
+    public static void contains_startsWith_endsWith(){
+
+        String message = "I Love Programming in Java!";
+
+        boolean endsWithJava = message.endsWith("Java!"); // TRUE
+        boolean startsWithLove = message.startsWith("Love"); // FALSE
+
+        boolean containsIn = message.contains("in"); // TRUE
+        boolean containsM = message.contains("M"); // FALSE
+
+    }
+
+    public static void replaceMethod(){
+
+        String message = "I Love Programming in Java!";
+
+        message = message.replace("Love", "LOVE");
+
+        System.out.println(message);
+
+        System.out.println(message.replace(" in Java", ""));
+
+    }
+
 }
