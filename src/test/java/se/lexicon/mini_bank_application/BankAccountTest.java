@@ -1,18 +1,40 @@
 package se.lexicon.mini_bank_application;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class BankAccountTest {
 
-
     @Test
-    void withdraw_should_fail_when_amount_higher_then_balance(){
+    @DisplayName("withdraw should succeed when amount is greater then 0 and Enough Balance")
+    void withdraw_SucceedGreaterThen0EnoughBalance() {
+        BankAccount account = new BankAccount();
+        account.balance = 600;
+
+        double withdrawReturnValue = account.withdraw(500);
+
+        double expectedBalance = 100;
+        double actualBalance = account.balance;
+
+        assertAll(
+                () -> assertEquals(expectedBalance, actualBalance, "Balance should be 100"),
+                () -> assertEquals(500, withdrawReturnValue, "Should Return amount transferred")
+        );
 
     }
 
     @Test
-    void withdraw_should_fail_when_amount_is_negative(){
+    void withdraw_should_fail_when_amount_higher_then_balance() {
+
+    }
+
+    @Test
+    void withdraw_should_fail_when_amount_is_negative() {
 
     }
 
